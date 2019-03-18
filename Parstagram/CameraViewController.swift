@@ -62,7 +62,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         //resize image b/c heroku has image limit
         let size = CGSize(width: 300, height: 300)
-        let scaleImage = image.af_imageScaled(to: size)
+        let scaleImage = image.af_imageAspectScaled(toFill: size)
         
         imageView.image = scaleImage
         
